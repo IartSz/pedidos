@@ -36,10 +36,10 @@ public class Producto {
     @Column
     private String genero;
     @Column
-    private int precio;
+    private Integer precio;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idProducto", nullable = false)
+    @JoinColumn(name = "id_pedido", nullable = false)
     @JsonBackReference
     @ToString.Exclude
     private Pedido pedido;
